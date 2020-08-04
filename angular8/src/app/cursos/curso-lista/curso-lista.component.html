@@ -1,0 +1,35 @@
+<div class="form-droup row">
+    <label class="col-sm-2 col-from-label" for="">Pesquisar:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="filtro">
+
+    </div>
+</div>
+<br>
+
+    <h2>Cursos</h2>
+    <table class="table table-striped">
+        <thead>
+            <th>Image</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Code</th>
+            <th>Duração</th>
+            <th>Data de inicio</th>
+            <th>Classificao</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let curso of cursoFiltrados">
+                <td><img [src]="curso.imageUrl" style="width: 30px;height: 30px;"></td>
+                <td>{{curso.name}}</td>
+                <td>R$ {{curso.preco}}</td>
+                <td>{{curso.code | lowercase | replace: '-':' '}}</td>
+                <td>{{curso.duracao}} H</td>
+                <td>{{curso.dataCriacao | date: 'dd/MM/yyyy'}}</td>
+                <td>
+                    <app-estrela [avaliacao]="curso.avaliacao"></app-estrela>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>

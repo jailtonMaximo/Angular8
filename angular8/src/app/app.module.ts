@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CursoListaComponent } from './cursos/curso-lista/curso-lista.component';
 import { EstrelaComponent } from './estrela/estrela/estrela.component';
+import { ReplacePipe } from './pipe/replace.pipe';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { EstrelaComponent } from './estrela/estrela/estrela.component';
     AppComponent,
     CursoListaComponent,
     EstrelaComponent,
+    ReplacePipe
   ],
   imports: [
     BrowserModule,
