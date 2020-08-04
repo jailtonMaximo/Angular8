@@ -16,7 +16,7 @@ import { EstrelaComponent } from './estrela/estrela/estrela.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
