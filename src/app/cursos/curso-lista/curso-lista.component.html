@@ -17,17 +17,21 @@
             <th>Duração</th>
             <th>Data de inicio</th>
             <th>Classificao</th>
+            <th>Opções</th>
         </thead>
         <tbody>
             <tr *ngFor="let curso of cursoFiltrados">
                 <td><img [src]="curso.imageUrl" style="width: 30px;height: 30px;"></td>
                 <td>{{curso.name}}</td>
-                <td>R$ {{curso.preco}}</td>
+                <td>{{curso.preco | currency:'BRL':true:'1.2-2' | replace: '.':','}}</td>
                 <td>{{curso.code | lowercase | replace: '-':' '}}</td>
                 <td>{{curso.duracao}} H</td>
                 <td>{{curso.dataCriacao | date: 'dd/MM/yyyy'}}</td>
                 <td>
                     <app-estrela [avaliacao]="curso.avaliacao"></app-estrela>
+                </td>
+                <td>
+                    <a [routerLink]="[ '/curso', curso.id ]"  class="btn btn-sm btn-primary"><i class="fa fafa fa-info-circle"></i></a>
                 </td>
 
             </tr>

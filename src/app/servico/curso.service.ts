@@ -6,12 +6,23 @@ import { Curso } from '../modelos/curso';
     providedIn: 'root'
 })
 
-export class CourseService { 
+export class CourseService {
 
     todosCursos(): Curso[] {
         return CURSOS;
     }
 
+    buscarPorId(id: number): Curso {
+        return CURSOS.find((c: Curso) => c.id == id);
+    }
+    salvarEatualizar(curso:Curso){
+        if(curso.id){
+            const index = CURSOS.findIndex((c:Curso)=> c.id == curso.id);
+            CURSOS[index] = curso;
+        }else{
+            CURSOS.push(curso); 
+        }
+    }
 }
 
 var CURSOS: Curso[] = [

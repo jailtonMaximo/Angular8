@@ -1,0 +1,72 @@
+<h2>Curso</h2>
+<hr />
+<!-- <form #cursoForm="ngForm">
+    <div class="form-droup row">
+        <label class="col-sm-2 col-from-label" for="">Nome:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" required [ngClass]="{'is-invalid': cursoName.invalid}"
+                #cursoName="ngModel" [(ngModel)]="curso.name">
+            <div class="invalid-feedback">
+                <span>Nome do curso é obrigatorio</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-droup row mt-2">
+        <label class="col-sm-2 col-from-label" for="">Preço:</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" name="preco" required
+                [ngClass]="{'is-invalid': cursoPrecp.invalid}" #cursoPrecp="ngModel" [(ngModel)]="curso.preco">
+            <div class="invalid-feedback">
+                <span>Preço do curso é obrigatorio</span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button [disabled]="cursoForm.invalid" class="btn btn-primary mr-2" (click)="salvar()">Salvar</button>
+        <button class="btn btn-secondary ">Voltar</button>
+    </div>
+
+</form> -->
+<form>
+    <div class="form-group">
+        <label for="inputAddress">Nome</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+    <div class="form-row">
+     
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Preço</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Duração</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+    </div>
+   
+    <div class="form-group">
+      <label for="inputAddress2">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+     
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Descrição</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary mr-2">Salvar</button>
+    <button type="submit" class="btn btn-primary mr-2">Voltar</button>
+    <button type="submit" class="btn btn-primary">Editar</button>
+  </form>
