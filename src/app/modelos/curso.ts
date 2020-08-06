@@ -1,11 +1,11 @@
 export class Curso {
     id:number;
-    name:String;
-    imageUrl:String;
+    name:string;
+    imageUrl:string;
     preco:number;
-    code:String;
+    code:string;
     duracao:number;
     avaliacao:number;
-    dataCriacao:String;
-    descricao:String;
+    dataCriacao:string;
+    descricao:string;
 }
